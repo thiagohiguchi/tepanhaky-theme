@@ -45,15 +45,15 @@ add_action('after_setup_theme', 'tpky_setup');
 /*--------------------------------------------------------------
  * Enqueue scripts and styles.
 --------------------------------------------------------------*/
-function tpky_scripts()
-{
-    $template_path_uri = get_template_directory_uri();
-    $template_path = get_template_directory();
-    // Load latest css version
-    wp_enqueue_style('labs-style', $template_path_uri . '/style.css', array(), filemtime($template_path . '/style.css'), 'all');
+// function tpky_scripts()
+// {
+//     $template_path_uri = get_template_directory_uri();
+//     $template_path = get_template_directory();
+//     // Load latest css version
+//     wp_enqueue_style('tpky-style', $template_path_uri . '/style.css', array(), filemtime($template_path . '/style.css'), 'all');
 
-    if (is_singular() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
-}
-add_action('wp_enqueue_scripts', 'tpky_scripts');
+//     if (is_singular() && comments_open() && get_option('thread_comments')) {
+//         wp_enqueue_script('comment-reply');
+//     }
+// }
+// add_action('wp_enqueue_scripts', 'tpky_scripts');
